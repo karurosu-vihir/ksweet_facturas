@@ -1,14 +1,15 @@
 import styled from "styled-components"
-import { useContext, useEffect, useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Context } from "../../Context/globalcontext"
 
 const Cabecera = styled.header`
     position: relative;
     width: 100%;
     height: 27vh;
-    overflow: hidden;
-
+    @media (max-width: 940px) {
+        height: 15vh;
+    }
+    @media (max-width: 600px) {
+        height: 10vh;
+    }
     img {
         z-index: 0;
         position: absolute;
@@ -35,6 +36,14 @@ const Cabecera = styled.header`
          1px -1px 0 black,
         -1px  1px 0 black,
          1px  1px 0 black;
+        @media (max-width: 750px) {
+            left: 50%;
+            font-size: 2rem;
+        }
+        @media (max-width: 410px) {
+            left: 50%;
+            font-size: 1.5rem;
+        }
     }
 `
 
